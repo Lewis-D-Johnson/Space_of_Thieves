@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-	public string Name;
-
 	[ShowIf("IsPickup")] public InventoryItem Item;
 	[ShowIf("IsPickup")] public int Amount;
 

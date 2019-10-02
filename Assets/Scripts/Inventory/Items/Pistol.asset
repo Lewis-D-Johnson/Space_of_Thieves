@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2015606bee44855418543c860aba1bd2, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  ItemName: 
-  ItemDescription: 
-  CurrentCount: 0
+  ItemName: Pistol
+  ItemDescription: Simple weapon pew pew pew.
+  CurrentCount: 1
+  thisType: 1
+  WeaponNameOnPlayer: Pistol

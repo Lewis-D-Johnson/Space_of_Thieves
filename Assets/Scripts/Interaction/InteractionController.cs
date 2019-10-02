@@ -22,12 +22,16 @@ public class InteractionController : MonoBehaviour
 				{
 					case Interactable.InteractType.Pickup:
 						{
-							InteractText.text = ("Press [F] to pickup " + thisInteractable.Name + ((thisInteractable.Amount > 0) ? " (" + thisInteractable.Amount + ")" : "")).ToUpper();
+							if (thisInteractable.Item.thisType != InventoryItem.ItemType.Weapon)
+								InteractText.text = ("Press [F] to pickup " + thisInteractable.Item.ItemName + ((thisInteractable.Amount > 0) ? " (" + thisInteractable.Amount + ")" : "")).ToUpper();
+							else
+								InteractText.text = ("Press [F] to pickup " + thisInteractable.Item.ItemName).ToUpper();
+
 							break;
 						}
 					case Interactable.InteractType.Toggle:
 						{
-							InteractText.text = ("Press [F] to toggle " + thisInteractable.Name).ToUpper();
+							InteractText.text = ("Press [F] to toggle " + thisInteractable.Item.ItemName).ToUpper();
 							break;
 						}
 				}

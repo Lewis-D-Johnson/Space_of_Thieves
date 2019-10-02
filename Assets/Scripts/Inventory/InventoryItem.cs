@@ -10,4 +10,12 @@ public class InventoryItem : ScriptableObject
 	public int CurrentCount;
 
 	public enum ItemType { Item, Weapon }
+	public ItemType thisType;
+
+	[ShowIf("IsWeapon")] public string WeaponNameOnPlayer;
+
+	bool IsWeapon()
+	{
+		return (thisType == ItemType.Weapon) ? true : false;
+	}
 }
